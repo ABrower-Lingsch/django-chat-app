@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from "react";
 import Cookies from 'js-cookie';
 import UserLogin from "./components/Login/UserLogin";
-import ChatApp from "./components/MainApp/ChatApp";
+import MainChat from "./components/Primary/MainChat";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -42,8 +42,8 @@ function App() {
     <Navbar className="nav">
         <Container>
           <div>
-            <Navbar.Brand href="#home" className="title">LFG</Navbar.Brand>
-            <Navbar.Brand className="subtitle">Find your gaming group</Navbar.Brand>
+            <Navbar.Brand href="#" className="title">Looking For Group</Navbar.Brand>
+            <Navbar.Brand className="subtitle">Find the group for you</Navbar.Brand>
           </div>
           <Nav className="links">
             <Nav.Link className="username"><MdAccountCircle className="user-icon"/>{user}</Nav.Link>
@@ -53,7 +53,7 @@ function App() {
     </Navbar>
     <section className="app">
       <div className="main">
-        {auth ? <ChatApp user={user}/> : <UserLogin setAuth={setAuth} setUser={setUser} />}
+        {auth ? <MainChat user={user}/> : <UserLogin setAuth={setAuth} setUser={setUser} />}
       </div>
     </section>
     </>

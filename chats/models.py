@@ -11,7 +11,6 @@ class Room(models.Model):
 
 class Chat(models.Model):
     text = models.TextField()
-    # a room will have many chats but a chat can only have one room
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True)

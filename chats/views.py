@@ -6,9 +6,8 @@ from .permisions import IsAuthorOrReadOnly
 
 
 class RoomListAPIView(generics.ListCreateAPIView):
-    queryset = Room.objects.all()
     serializer_class = RoomSerializer
-
+    queryset = Room.objects.all()
 
 class ChatListAPIView(generics.ListCreateAPIView):
     serializer_class = ChatSerializer
