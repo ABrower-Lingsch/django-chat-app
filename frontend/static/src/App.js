@@ -42,7 +42,7 @@ function App() {
     <Navbar className="nav">
         <Container>
           <div>
-            <Navbar.Brand href="#" className="title">Looking For Group</Navbar.Brand>
+            <Navbar.Brand href="#home" className="title">ChitChat</Navbar.Brand>
             <Navbar.Brand className="subtitle">Find the group for you</Navbar.Brand>
           </div>
           <Nav className="links">
