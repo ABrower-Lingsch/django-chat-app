@@ -87,17 +87,17 @@ function MainChat(props) {
   ))
 
   return (
-    <>
-        <ul className="list rooms">
+    <div className="main-chat">
+        <ul className="list-rooms">
             {roomButtons}
-            <Dropdown className="room-dropdown">
+            {/* <Dropdown className="room-dropdown">
                 <Dropdown.Toggle className="dropdown-cover">
                     {dropdownName}
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="menu">
                     {roomSelect}
                 </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
             <li className='new-room-li'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="new-room" controlId="enterRoom">
@@ -106,6 +106,7 @@ function MainChat(props) {
                             className="add-room-input input" 
                             type="text" 
                             placeholder="Room name..."
+                            maxLength={30}
                             required
                             value={name}
                             onChange={(e) => setName(e.target.value)}
@@ -116,7 +117,7 @@ function MainChat(props) {
             </li>
         </ul>
         <Messages filter={filter} activeRoom={activeRoom} user={props.user}/>
-    </>
+    </div>
   );
 }
 

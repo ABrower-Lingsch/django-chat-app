@@ -35,7 +35,9 @@ function LoginForm(props) {
       body: JSON.stringify(state),
     };
 
-    const response = await fetch("/dj-rest-auth/login/", options).catch(handleError);
+    const response = await fetch("/dj-rest-auth/login/", options).catch(
+      handleError
+    );
     if (!response.ok) {
       throw new Error("Network response was not OK");
     } else {

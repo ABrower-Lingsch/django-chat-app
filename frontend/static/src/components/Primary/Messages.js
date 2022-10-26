@@ -77,8 +77,8 @@ function Messages(props) {
     .map((message) => <MessageItem key={message.id} message={message} deleteMessage={deleteMessage} user={props.user}/>);
 
   return (
-    <div className="send-recieve">
-        <div>
+    <div className="message-area">
+        <div className="message-list">
             <ul className="list">{messageList}</ul>
         </div>
         <div className="messeger">
